@@ -82,6 +82,7 @@ Route::get('not_found', 'Admin\NotFoundController@get');
 
 
     Route::get('/', 'User\HomeController@get')->name('index');
+    Route::get('/comment', 'User\HomeController@comment')->name('comment');
     Route::post('home/post', 'User\HomeController@post');
 
     Route::get('news/details', 'User\NewsDetailsController@get');
@@ -97,4 +98,3 @@ Route::group(['prefix' => 'student', 'middleware' => 'auth_student'], function (
 });
 Route::get('student/login', ['as' => 'login_student', 'uses' => 'Student\LoginController@get']);
 Route::post('student/login/post', 'Student\LoginController@post');
-

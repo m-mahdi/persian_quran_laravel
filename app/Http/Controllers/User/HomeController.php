@@ -40,4 +40,9 @@ class HomeController extends Controller
 
     }
 
+    public function comment()
+    {
+        return view('user/comment');
+    }
+
 }
