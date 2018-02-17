@@ -50,48 +50,50 @@
 
 <body>
 
-{{--<header id="header">--}}
-    {{--<div class="container">--}}
+<header id="header">
+    <div class="container">
 
-        {{--<div id="logo">--}}
-            {{--<a href="#hero"><img src="{{ asset('img/user/logo.png') }}" alt="" title=""/></a>--}}
-            {{--<!-- Uncomment below if you prefer to use a text image -->--}}
-            {{--<!--<h1><a href="#hero">Header 1</a></h1>-->--}}
-        {{--</div>--}}
+        <div id="logo">
+            <a href="#hero"><img src="{{ asset('img/user/logo.png') }}" alt="" title=""/></a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Header 1</a></h1>-->
+        </div>
 
-        {{--<nav id="nav-menu-container">--}}
-            {{--<ul class="nav-menu">--}}
-                {{--<li class="menu-active"><a href="#hero">خانه</a></li>--}}
-                {{--<li><a href="#contact">تماس با ما</a></li>--}}
-                {{--<li><a href="">نظرات</a></li>--}}
-            {{--</ul>--}}
-        {{--</nav><!-- #nav-menu-container -->--}}
-    {{--</div>--}}
-{{--</header><!-- #header -->--}}
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="{{url('/')}}">خانه</a></li>
+
+                <li><a href="">نظرات</a></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- #header -->
+<div class="container ">
+<h2 class="h2 header-title"> نظرات</h2>
 
         <form class="form-horizontal" method="POST" action="{{url('/home/post')}}">
             {{ csrf_field() }}
             <div class="form">
                 <div id="sendmessage"></div>
                 <div id="errormessage"></div>
-                <div class="form-group">
+                <div class="form-group ">
                     <input type="text" name="name" class="form-control" id="name" placeholder="نام شما"
-                           data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
                     <div class="validation"></div>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل شما"
-                           data-rule="email" data-msg="Please enter a valid email"/>
+                    data-rule="email" data-msg="Please enter a valid email" required/>
                     <div class="validation"></div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع"
-                           data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                    data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
                     <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                              data-msg="Please write something for us" placeholder="پیام"></textarea>
+                    <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                              data-msg="Please write something for us" placeholder="پیام" required></textarea>
                     <div class="validation"></div>
                 </div>
                 <div class="text-center">
@@ -100,20 +102,20 @@
             </div>
         </form>
 
-
-        {{--<footer id="footer">--}}
-            {{--<div class="container">--}}
-                {{--<div class="row">--}}
-                    {{--<div class="col-md-12">--}}
-                        {{--<div class="copyright">--}}
-                            {{--تمام حقوق برای<strong> مرکز تربیت مدرس قرآن قائن </strong>محفوظ است.--}}
-                        {{--</div>--}}
-                        {{--<div class="credits">--}}
-                            {{--امروز گرسنگي فكر از گرسنگي نان فاجعه آميز تر است--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</footer><!-- #footer -->--}}
+</div>
+        <footer id="footer" style="margin-top: 120px">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            تمام حقوق برای<strong> مرکز تربیت مدرس قرآن قائن </strong>محفوظ است.
+                        </div>
+                        <div class="credits">
+                            امروز گرسنگي فكر از گرسنگي نان فاجعه آميز تر است
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- #footer -->
 </body>
 </html>
